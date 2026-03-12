@@ -2,11 +2,10 @@
   "name": "budget-bee-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "type": "module",
-  
+  "main": "index.ts",
   "scripts": {
-    "start": "nodemon server.js",
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "start": "nodemon src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -17,5 +16,11 @@
     "express": "^5.2.1",
     "mongoose": "^9.3.0",
     "nodemon": "^3.1.14"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.5.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3"
   }
 }
