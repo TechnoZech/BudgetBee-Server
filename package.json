@@ -1,17 +1,12 @@
 {
   "name": "budget-bee-server",
   "version": "1.0.0",
-  "description": "BudgetBee backend server",
   "main": "dist/index.js",
   "scripts": {
     "dev": "ts-node-dev --respawn src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js",
-    "render-build": "npm install && npm run build"
+    "start": "node dist/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "cors": "^2.8.6",
     "express": "^5.2.1",
