@@ -1,12 +1,13 @@
 {
   "name": "budget-bee-server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.ts",
+  "description": "BudgetBee backend server",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "ts-node-dev --respawn src/index.ts",
-    "start": "nodemon src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "render-build": "npm install && npm run build"
   },
   "keywords": [],
   "author": "",
@@ -14,8 +15,7 @@
   "dependencies": {
     "cors": "^2.8.6",
     "express": "^5.2.1",
-    "mongoose": "^9.3.0",
-    "nodemon": "^3.1.14"
+    "mongoose": "^9.3.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
