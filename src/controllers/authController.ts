@@ -21,7 +21,6 @@ export const googleLogin = async (req: Request, res: Response) => {
     }
 
     const jwtToken = generateToken(user.id);
-
     res.json({
       token: jwtToken,
       user
