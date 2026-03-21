@@ -19,7 +19,6 @@ export const googleLogin = async (req: Request, res: Response) => {
         photo: decoded.picture
       });
     }
-
     const jwtToken = generateToken(user.id);
     res.json({
       token: jwtToken,
