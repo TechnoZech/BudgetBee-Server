@@ -4,6 +4,7 @@ import cors from "cors";
 import connectDB from "./config/db";
 import authRoutes from "./routes/authRoutes";
 import transactionRoutes from "./routes/transactionRoutes";
+import categoryRoutes from "./routes/categoriesRoutes";
 
 dotenv.config();
 connectDB();
@@ -15,6 +16,7 @@ app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/transactions", transactionRoutes);
+app.use("/api/categories", categoryRoutes);
 
 app.get("/", (_, res) => {
   res.send("BudgetBee API Running");
